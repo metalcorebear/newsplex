@@ -4,9 +4,9 @@
 
 ## About
 
-Newsplex uses topological data analysis to identify topological invariance in news discourse surrounding geopolitical events<br>
+Newsplex uses topological data analysis to identify topological invariance in news discourse surrounding geopolitical events.<br>
 
-The newsaggregator class uses the NewsAPI service to download news articles that braccket a specific date (date of event in question). It tokenizes text and preprocesses it for Word2Vec fitting and eventual topological analysis.<br>
+The newsaggregator class uses the NewsAPI service to download news articles that bracket a specific date (date of event in question). It tokenizes text and preprocesses it for Word2Vec fitting and eventual topological analysis.<br>
 
 The newsplex class fits the preprocessed data to a Word2Vec model, reduces its dimmensionality using t-distributed stochastic neighbor emebedding (tSNE), and finally computes topological features within a moving window (persistence distributions). It then calculates the Wasserstein distances between persistence distriibutions at each window. A large Wasserstein distance may indicate a topological shift in discourse - a potential signature of a significant event.
 
