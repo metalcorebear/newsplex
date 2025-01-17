@@ -99,7 +99,10 @@ def filter_response(response):
         return []
 
 def date_convert(date_string):
-    date_object = datetime.strptime(date_string, '%Y-%m-%dT%H:%M:%SZ')
+    try:
+        date_object = datetime.strptime(date_string, '%Y-%m-%dT%H:%M:%SZ')
+    except:
+        date_object = datetime.strptime(date_string, '%Y-%m-%d')
     return date_object
 
 def convert_all_dates(csv_file, metadata):
